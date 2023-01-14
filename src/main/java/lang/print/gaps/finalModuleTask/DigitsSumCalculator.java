@@ -1,15 +1,13 @@
 package lang.print.gaps.finalModuleTask;
 
 public class DigitsSumCalculator {
-    public static void calculateSum(int number) {
-        int result = 0;
-        for (int i = 0; i <= number; i++) {
-            System.out.println(i);
+    public  void calculateSum(int number) {
+        int sum = 0;
+        while (number != 0){
+            int remainder = number % 10;
+            sum += remainder;
+            number = number / 10;
         }
-        System.out.println(result);
+        System.out.println(sum);
     }
-    public static void main(String[] args){
-        calculateSum(2345);
-    }
-
 }
